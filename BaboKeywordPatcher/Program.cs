@@ -79,6 +79,7 @@ namespace BaboKeywordPatcher
         public static IKeywordGetter? SLA_HasStockings;
         public static IKeywordGetter? SLA_MiniSkirt;
         public static IKeywordGetter? SLA_ArmorHalfNakedBikini;
+        public static IKeywordGetter? SLS_BikiniArmor;
 
         public static void LoadKeywords(IPatcherState<ISkyrimMod, ISkyrimModGetter> state)
         {
@@ -118,6 +119,7 @@ namespace BaboKeywordPatcher
             SLA_HasStockings = LoadKeyword(state, "SLA_HasStockings");
             SLA_MiniSkirt = LoadKeyword(state, "SLA_MiniSkirt");
             SLA_ArmorHalfNakedBikini = LoadKeyword(state, "SLA_ArmorHalfNakedBikini");
+            SLS_BikiniArmor = LoadKeyword(state, "_SLS_BikiniArmor");
         }
 
         private static void AddTag(Armor AEO, IKeywordGetter tag)
@@ -258,6 +260,7 @@ namespace BaboKeywordPatcher
             {
                 matched = true;
                 AddTag(armorEditObj, SLA_ArmorHalfNakedBikini);
+                AddTag(armorEditObj, SLS_BikiniArmor);
             }
             // SLA_ThongT
             if (StrMatch(name, "thong") || StrMatch(name, "bottom"))
