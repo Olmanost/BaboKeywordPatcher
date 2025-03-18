@@ -255,6 +255,7 @@ namespace BaboKeywordPatcher
             {
                 matched = true;
                 AddTag(armorEditObj, SLA_BraArmor);
+                AddTag(armorEditObj, SLS_BikiniArmor);
             }
             if (StrMatch(name, "bikini"))
             {
